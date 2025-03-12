@@ -5,8 +5,6 @@ extends Node2D
 @export var nav_agent: NavigationAgent2D = null;
 @export var target_lost_state: String = "";
 
-@export var attack_area: AttackArea = null;
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if nav_agent == null:
@@ -16,13 +14,12 @@ func _process(_delta: float) -> void:
 	pass;
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if !self.target_tracker.has_target():
 		StateMachine.switch_state(self, target_lost_state);
 		return;
 	var target = target_tracker.get_target();
-	character_body.move_in_direction(self.get_nav_dir(target.global_position));
-	attack_area.process_hits();
+	character_body.move_in_direction(self.get_nav_dir(target.global_position), delta);
 	
 func get_nav_dir(target_pos: Vector2) -> Vector2:
 	self.nav_agent.target_position = target_pos;

@@ -13,9 +13,12 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Vector2(
 		Input.get_axis(move_left_action,move_right_action),
 		Input.get_axis(move_up_action,move_down_action));
 	
-	self.entity_body.move_in_direction(direction.normalized());
+	if direction == Vector2.ZERO && Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		direction = entity_body.get_local_mouse_position();
+	
+	self.entity_body.move_in_direction(direction.normalized(), delta);
