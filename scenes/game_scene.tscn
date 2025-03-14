@@ -11,9 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c1ap6hg0m83r8" path="res://scenes/ui/ui_layer.tscn" id="8_x4mid"]
 [ext_resource type="Script" path="res://scripts/progress/upgrade_pool.gd" id="10_p3qde"]
 [ext_resource type="Script" path="res://scripts/progress/upgrades/upgrade_strategy.gd" id="11_cxuin"]
-[ext_resource type="Resource" uid="uid://dd24yirbinvnu" path="res://assets/upgrades/minion_damage.tres" id="12_tx0rt"]
-[ext_resource type="Resource" uid="uid://bth1wqc8bx3ro" path="res://assets/upgrades/minion_health.tres" id="13_a8l4i"]
-[ext_resource type="Resource" uid="uid://da8kllt0ep1bq" path="res://assets/upgrades/minion_attack_speed.tres" id="16_vajcb"]
+[ext_resource type="Resource" uid="uid://dd24yirbinvnu" path="res://Assets/upgrades/minion_damage.tres" id="12_tx0rt"]
+[ext_resource type="Resource" uid="uid://bth1wqc8bx3ro" path="res://Assets/upgrades/minion_health.tres" id="13_a8l4i"]
+[ext_resource type="Resource" uid="uid://da8kllt0ep1bq" path="res://Assets/upgrades/minion_attack_speed.tres" id="16_vajcb"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k0imj"]
 blend_mode = 4
