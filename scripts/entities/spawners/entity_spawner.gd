@@ -1,8 +1,8 @@
 extends Node2D
 class_name EntitySpawner
 
-@export var spawn_interval_min: float = .5;
-@export var spawn_interval_max: float = .7;
+@export var spawn_interval_min: float = 4;
+@export var spawn_interval_max: float = 6;
 @export var spawn_scene: PackedScene = null;
 
 @export var spawn_to: Node = null;

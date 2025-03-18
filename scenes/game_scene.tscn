@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/entities/spawners/entity_spawner.gd" id="2_qdphv"]
 [ext_resource type="PackedScene" uid="uid://dubqfll6wt3er" path="res://scenes/entities/enemy.tscn" id="3_3rgyx"]
 [ext_resource type="Script" path="res://scripts/entities/spawners/spawner_rotation.gd" id="4_ko6km"]
-[ext_resource type="Texture2D" uid="uid://dbhlxyr0jai8p" path="res://Assets/Sprites/pentagram.svg" id="5_5fu4y"]
+[ext_resource type="Texture2D" uid="uid://dbhlxyr0jai8p" path="res://assets/sprites/pentagram.svg" id="5_5fu4y"]
 [ext_resource type="Script" path="res://scripts/camera/follow_camera_2d.gd" id="5_wc26p"]
 [ext_resource type="Script" path="res://scripts/entities/spawners/spawner_difficulty_increase.gd" id="7_g871n"]
 [ext_resource type="Script" path="res://scripts/entities/spawners/minions.gd" id="8_b1bpx"]
@@ -110,6 +110,12 @@ timer_scale_fac = 0.99
 script = ExtResource("8_b1bpx")
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("3_3rgyx")]
+
+[node name="StrongEnemy" type="Node2D" parent="."]
+
+[node name="Enemy" parent="StrongEnemy" instance=ExtResource("3_3rgyx")]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 visible = false
