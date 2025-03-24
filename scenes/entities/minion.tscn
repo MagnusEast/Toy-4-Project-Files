@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://krh4wqhn34oi"]
 
 [ext_resource type="Script" path="res://scripts/entities/entity.gd" id="1_fk853"]
-[ext_resource type="Texture2D" uid="uid://onhpoqcmxp7r" path="res://icon.svg" id="1_r8ng3"]
 [ext_resource type="Script" path="res://scripts/health/health_tracker.gd" id="2_sfkwh"]
+[ext_resource type="Texture2D" uid="uid://cyf41v0y3ybpb" path="res://assets/sprites/skeleton_minion.png" id="3_jhxdw"]
 [ext_resource type="Script" path="res://scripts/entities/state_machine/target_tracker.gd" id="5_ktk4i"]
 [ext_resource type="Script" path="res://scripts/entities/boid_movement.gd" id="5_xdtae"]
 [ext_resource type="Script" path="res://scripts/entities/deferred_velocity.gd" id="7_lthrt"]
@@ -43,9 +43,8 @@ grow_vertical = 2
 max_value = 10.0
 
 [node name="Minion" type="Sprite2D" parent="."]
-modulate = Color(0.2, 1, 0.294118, 1)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_r8ng3")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_jhxdw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bm50p")

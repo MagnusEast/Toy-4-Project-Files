@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyi6ytmuutbfl"]
+
+[ext_resource type="AudioStream" uid="uid://bjaqcnplbr5uf" path="res://assets/sounds/HeatOfBattle.mp3" id="1_sdsi6"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_sdsi6")
+autoplay = true
+max_distance = 9.22337e+18
